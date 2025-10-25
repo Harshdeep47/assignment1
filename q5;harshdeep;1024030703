@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a[10][10], n, m;
+    cout << "Enter rows and columns: ";
+    cin >> n >> m;
+    cout << "Enter elements:\n";
+    for (int i = 0; i < n; ++i)
+        for (int j = 0; j < m; ++j)
+            cin >> a[i][j];
+    for (int i = 0; i < n; ++i) {
+        int sum = 0;
+        for (int j = 0; j < m; ++j)
+            sum += a[i][j];
+        cout << "Sum of row " << i << " = " << sum << endl;
+    }
+    for (int j = 0; j < m; ++j) {
+        int sum = 0;
+        for (int i = 0; i < n; ++i)
+            sum += a[i][j];
+        cout << "Sum of column " << j << " = " << sum << endl;
+    }
+    return 0;
+}
